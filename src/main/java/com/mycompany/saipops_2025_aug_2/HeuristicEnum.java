@@ -15,6 +15,7 @@ public enum HeuristicEnum {
     
          
     POPS   ,  
+    
     CPLEX;
     
 }

@@ -125,7 +125,19 @@ public class LowerBoundConstraint {
             } else if (triplet.significance.equals( SECONDARY)) {                
                 //secondary var    
                 
-                attr.all_SecondaryVariables.add( triplet.varName);
+                if (triplet.isFractional){
+                    attr.fractionalSecondaryVariables.add (triplet.varName   );
+                }
+                
+                numSecondaryVariablesExamined ++;
+                remainingSecondarySlack -= thisCoeffMagnitude;
+                if (BILLION == attr.secondaryDimension){
+                    if (remainingSecondarySlack == DOUBLE_ZERO){
+                        attr.secondaryDimension=numSecondaryVariablesExamined;
+                    }else if (remainingSecondarySlack  < DOUBLE_ZERO){
+                        attr.secondaryDimension=numSecondaryVariablesExamined- ONE;
+                    }
+                }
                 
             }   else {
                 //neutral var

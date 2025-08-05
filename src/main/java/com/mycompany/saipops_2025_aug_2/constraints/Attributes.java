@@ -20,21 +20,26 @@ public class Attributes {
     
     public int primaryDimension = BILLION; 
     public TreeSet<String   >  fractionalPrimaryVariables    = new TreeSet<String   > ();
-    public TreeSet<String> all_SecondaryVariables = new TreeSet<String> ();
     
+    public int secondaryDimension = BILLION; 
+    public TreeSet<String   >  fractionalSecondaryVariables    = new TreeSet<String   > ();
       
     public int neutralDimension = BILLION;    
     public TreeSet<String>  fractional_PositiveNeutralVariables = new TreeSet<String>();
     public TreeSet<String>  fractional_NegativeNeutralVariables = new TreeSet<String>();
  
     public boolean hasFractionalVariables () {
-        return fractionalPrimaryVariables.size() +  
+        return fractionalPrimaryVariables.size() +  fractionalSecondaryVariables.size()  + 
                 fractional_PositiveNeutralVariables .size() +
                 fractional_NegativeNeutralVariables.size() > ZERO;
     } 
     
     public boolean hasFractionalPrimaryVariables () {
         return fractionalPrimaryVariables.size()   > ZERO;
+    }
+    
+    public boolean hasFractionalSecondaryVariables () {
+        return this.fractionalSecondaryVariables.size()   > ZERO;
     }
    
     public boolean hasFractionalNeutralVariables () {

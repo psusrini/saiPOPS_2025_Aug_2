@@ -40,7 +40,7 @@ public class Parameters {
         
     }
     
-    public static final int  MIP_EMPHASIS = 3 ;
+    public static final int  MIP_EMPHASIS = 2 ;
     
     //cplex config related
     public static final int  HEUR_FREQ  = -1 ;    
@@ -50,16 +50,16 @@ public class Parameters {
     public static final int MAX_PERIODS =5;
     public static final int PERIOD_DURATION_IN_SECONDS =60*60; //60 minute periods
      
-    public static final HeuristicEnum HEURISTIC_TO_USE = HeuristicEnum.POPS;
+    public static final HeuristicEnum HEURISTIC_TO_USE = HeuristicEnum.CPLEX;
     public static final Boolean USE_OPTIMISTIC_DIMENSIONING = true;
     
     public static final String PRESOLVED_MIP_FILENAME =              
             System.getProperty("os.name").toLowerCase().contains("win") ?
      
-    //   "c:\\temp\\mips\\2club200v.pre.sav":
-   // "c:\\temp\\mips\\LTL8.pre.sav": 
+    //  "c:\\temp\\mips\\2club200v.pre.sav":
+  //  "c:\\temp\\mips\\LTL8.pre.sav": 
             
-   //  "c:\\temp\\mips\\bab1.pre.sav":
+   // "c:\\temp\\mips\\bab1.pre.sav":
             
     //   "c:\\temp\\mips\\bab2.pre.sav":
     //   "c:\\temp\\mips\\bab6.pre.sav":
@@ -76,13 +76,13 @@ public class Parameters {
     //   "c:\\temp\\mips\\neos-952987.pre.sav":
     //    "c:\\temp\\mips\\neos-954925.pre.sav":  
             
-    // "c:\\temp\\mips\\opm2-z10-s4.pre.sav":
+     "c:\\temp\\mips\\opm2-z10-s4.pre.sav":
     //   "c:\\temp\\mips\\opm2-z12-s7.pre.sav":        
     //  "c:\\temp\\mips\\opm2-z12-s8.pre.sav":   
     //    "c:\\temp\\mips\\opm2-z12-s14.pre.sav":   
             
             
-    //     "c:\\temp\\mips\\p6b.pre.sav":
+    //    "c:\\temp\\mips\\p6b.pre.sav":
     //   "c:\\temp\\mips\\protfold.pre.sav":
             
     //    "c:\\temp\\mips\\queens-30.pre.sav":
@@ -94,14 +94,14 @@ public class Parameters {
             
     // "c:\\temp\\mips\\s100.pre.sav":
     //   "c:\\temp\\mips\\s1234.pre.sav":            
-    //   "c:\\temp\\mips\\seymour-disj-10.pre.sav":      
+     //   "c:\\temp\\mips\\seymour-disj-10.pre.sav":      
     //   "c:\\temp\\mips\\sorrell3.pre.sav":    
     //   "c:\\temp\\mips\\stp3d.pre.sav":
     //   "c:\\temp\\mips\\supportcase10.pre.sav":
             
     // "c:\\temp\\mips\\v150d30-2hopcds.pre.sav":
             
-      "c:\\temp\\mips\\wnq.pre.sav":
+    //   "c:\\temp\\mips\\wnq.pre.sav":
                                                     
     //"C:\\temp\\MIPS\\knapsack.lp":          
      

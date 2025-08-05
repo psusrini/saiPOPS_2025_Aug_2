@@ -15,11 +15,7 @@ import java.util.TreeSet;
  * @author sst119
  */
 public class MathUtils {
-    
-    public MathUtils (){
-        
-    }
-    
+     
     public static     double objSum (TreeSet<String> varSet,  TreeMap<String, Double>  objectiveFunctionMap){
         double sum = ZERO;
         for (String var: varSet){
